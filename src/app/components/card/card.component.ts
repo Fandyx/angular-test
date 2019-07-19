@@ -4,6 +4,7 @@ import { Store, select } from '@ngrx/store';
 import { LoadPokemon } from 'src/app/store/actions/pokemon.actions';
 import { selectPokemonList } from 'src/app/store/selectors/pokemon.selectors';
 import { async } from 'rxjs/internal/scheduler/async';
+import { IPokemon } from 'src/app/models/pokemon.model';
 
 @Component({
   selector: 'app-card',
@@ -12,11 +13,10 @@ import { async } from 'rxjs/internal/scheduler/async';
 })
 export class CardComponent implements OnInit {
   @Input() pokemonId: number;
-
+  selectedPokemon: IPokemon = null;
   pokemon$ = this.store.select('pokemon').subscribe(pokemon => {
-    if (pokemon.length > 0 && pokemon[this.pokemonId]) {
-      console.log('aca');
-      return pokemon[this.pokemonId];
+    if (pokemon.pokemonList.length > 0 && pokemon.pokemonList[this.pokemonId]) {
+      this.selectedPokemon = pokemon.pokemonList[this.pokemonId];
     }
   });
   constructor(private store: Store<IAppState>) {}

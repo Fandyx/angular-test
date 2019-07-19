@@ -16,8 +16,7 @@ export function pokemonReducers(
     case PokemonActionTypes.LoadPokemonSuccess: {
       const pokemonList = [...state.pokemonList];
       pokemonList[action.payload.id - 1] = action.payload;
-      console.log(pokemonList);
-      console.log('aca', action.payload);
+
       return {
         ...state,
         isLoading: false,

@@ -1,5 +1,5 @@
 <p>
-  <a routerLink="/pokemon/2" *ngIf="pokemon$ | async as pokemon">{{
-    pokemon.name
+  <a routerLink="/pokemon/2" *ngIf="selectedPokemon">{{
+    selectedPokemon.name
   }}</a>
 </p>
