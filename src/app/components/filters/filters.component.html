@@ -1,0 +1,34 @@
+<div class="filter-container mt-30 d-flex align-items-center">
+  <div class="filter-container__dropdown">
+    <button
+      class="btn btn-light dropdown-toggle w-200"
+      type="button"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Filter By Type
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#" *ngFor="let item of types">{{
+        item
+      }}</a>
+    </div>
+  </div>
+  <div class="filter-container__dropdown ml-20">
+    <button
+      class="btn btn-light dropdown-toggle w-300"
+      type="button"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Sort by...
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#" *ngFor="let item of sortTypes">{{
+        item
+      }}</a>
+    </div>
+  </div>
+</div>

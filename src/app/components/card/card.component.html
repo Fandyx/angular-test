@@ -1,0 +1,5 @@
+<p>
+  <a routerLink="/pokemon/2" *ngIf="pokemon$ | async as pokemon">{{
+    pokemon.name
+  }}</a>
+</p>

@@ -1,0 +1,28 @@
+.mt-30 {
+  margin-top: 30px;
+}
+.mt-30 {
+  margin-bottom: 30px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.w-300 {
+  width: 300px;
+}
+.w-200 {
+  width: 200px;
+}
+.filter-container {
+  &__dropdown {
+    position: relative;
+  }
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.dropdown-menu {
+  width: 100%;
+}
